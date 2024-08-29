@@ -1,0 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Add this CSS to your stylesheet or global CSS file */
+.toast-custom {
+  background: transparent !important;
+  color: #fff; /* Text color */
+  border: 2px solid #00ff00; /* Light neon border color */
+}
+
+.toast-custom .Toastify__progress-bar {
+  background: #00ff00; /* Light neon progress bar color */
+}
+
+.Toastify__toast--success {
+  background: transparent !important;
+  color: #fff; /* Text color */
+  border: 2px solid #00ff00; /* Light neon border color */
+}
