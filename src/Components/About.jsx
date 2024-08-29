@@ -2,15 +2,14 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 function About() {
-  // Set up the inView hook
   const { ref, inView } = useInView({
-    threshold: 0.65, // Trigger when 10% of the section is in view
+    threshold: 0.65,
   });
 
   return (
     <div
-      ref={ref} // Attach the ref to the parent div
-      className="flex justify-center items-center flex-col bg-transparent relative z-10 py-12"
+      ref={ref}
+      className="relative z-10 flex flex-col justify-center items-center bg-transparent py-12 px-4"
       id="about"
     >
       <motion.div
@@ -19,10 +18,12 @@ function About() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, type: "spring", stiffness: 50 }}
       >
-        <h1 className="text-4xl font-bold text-white mb-6">About</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+          About
+        </h1>
       </motion.div>
 
-      <div className="flex justify-center items-center gap-8">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-8">
         <motion.div
           className="flex justify-center items-center"
           initial={{ opacity: 0, x: -100 }}
@@ -32,7 +33,7 @@ function About() {
           <img
             src="src/assets/IMG_20240829_175631[1].jpg"
             alt="photo"
-            className="w-72 h-72 object-cover rounded"
+            className="w-60 h-60 sm:w-72 sm:h-72 object-cover rounded"
           />
         </motion.div>
 

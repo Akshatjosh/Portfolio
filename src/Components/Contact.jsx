@@ -6,66 +6,73 @@ function Contact() {
   const notify = () =>
     toast.success("Thank You For Contacting Me !", {
       position: "top-right",
-      autoClose: 1000, // Close after 1 second
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: false,
-      pauseOnHover: false, // Pause on hover should be false to ensure auto-closing
+      pauseOnHover: false,
       draggable: true,
-      progress: 0, // Default progress bar
-      theme: "colored",
-      transition: "Bounce",
+      progress: 0,
+      theme: "dark",
     });
 
   return (
     <div
-      className="relative z-10 flex flex-col items-center min-h-screen py-12 "
+      className="relative z-10 flex flex-col justify-center items-center bg-transparent p-4"
       id="contact"
     >
-      <div className="flex justify-center items-center mb-8">
-        <h1 className="text-4xl text-white font-bold">Contact</h1>
-      </div>
-
-      <div className="w-full max-w-4xl px-4">
-        <form className="p-8 rounded-lg shadow-lg border border-gray-700 flex flex-col">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <input
-              type="text"
-              placeholder="First Name"
-              className="w-full p-3 border border-gray-700 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:border-lime-500 focus:ring focus:ring-lime-500 focus:ring-opacity-50"
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              className="w-full p-3 border border-gray-700 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:border-lime-500 focus:ring focus:ring-lime-500 focus:ring-opacity-50"
-            />
-          </div>
-
-          <div className="mb-6">
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full p-3 border border-gray-700 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:border-lime-500 focus:ring focus:ring-lime-500 focus:ring-opacity-50"
-            />
-          </div>
-
-          <div className="mb-6">
-            <textarea
-              placeholder="Message"
-              className="w-full h-32 p-3 border border-gray-700 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:border-lime-500 focus:ring focus:ring-lime-500 focus:ring-opacity-90"
-            ></textarea>
-          </div>
-
+      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
+        Contact Me
+      </h1>
+      <form
+        action="https://formspree.io/f/your-form-id"
+        method="POST"
+        className="w-full max-w-lg"
+        onSubmit={(e) => {
+          e.preventDefault();
+          notify();
+        }}
+      >
+        <div className="flex flex-col gap-4">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            className="p-3 border border-gray-700 rounded-md bg-gray-900 text-white"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            className="p-3 border border-gray-700 rounded-md bg-gray-900 text-white"
+          />
+          <textarea
+            name="message"
+            placeholder="Your message"
+            rows="4"
+            required
+            className="p-3 border border-gray-700 rounded-md bg-gray-900 text-white"
+          ></textarea>
           <button
-            type="button"
-            onClick={notify}
-            className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg hover:bg-lime-500 hover:border-lime-500 transition duration-300 ease-in-out self-end"
+            type="submit"
+            className="bg-lime-500 text-white py-2 px-4 rounded-md hover:bg-lime-600 transition duration-300"
           >
-            Send
+            Send Message
           </button>
-        </form>
-      </div>
-
-      <ToastContainer />
+        </div>
+      </form>
+      <ToastContainer
+        autoClose={1000}
+        hideProgressBar
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 }
