@@ -38,21 +38,21 @@ function Contact() {
             name="name"
             placeholder="Name"
             required
-            className="p-3 border border-gray-700 rounded-md bg-gray-900 text-white"
+            className="p-3 border border-gray-700 rounded-md bg-transparent text-white"
           />
           <input
             type="email"
             name="email"
             placeholder="Email"
             required
-            className="p-3 border border-gray-700 rounded-md bg-gray-900 text-white"
+            className="p-3 border border-gray-700 rounded-md bg-transparent text-white"
           />
           <textarea
             name="message"
             placeholder="Your message"
             rows="4"
             required
-            className="p-3 border border-gray-700 rounded-md bg-gray-900 text-white"
+            className="p-3 border border-gray-700 rounded-md bg-transparent text-white"
           ></textarea>
           <button
             type="submit"
