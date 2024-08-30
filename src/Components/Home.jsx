@@ -37,10 +37,10 @@ function Home() {
             </span>
           </h3>
           <p className="text-gray-300 max-w-lg mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa quia
-            saepe, illum dolores aperiam nesciunt eius iure voluptates minus,
-            molestias eaque rem fugit iusto suscipit cumque dolor, quaerat
-            officiis quis!
+            I am a passionate software developer pursuing a Master of Computer
+            Applications, with experience in JavaScript, Java, and building
+            projects like MyTube and MovieFix using React, Redux, Tailwind, and
+            Firebase.
           </p>
           <div className="flex gap-4 md:gap-6 mt-4">
             <Link
@@ -66,13 +66,13 @@ function Home() {
         </motion.div>
 
         <motion.div
-          className="image mt-8 md:mt-0"
+          className=" mt-8"
           initial={{ x: "100vw" }}
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 50 }}
         >
           <img
-            src="src/assets/IMG_20240829_175631[1].jpg"
+            src="src\assets\IMG_0737[1].JPG"
             alt="photo"
             className="w-60 h-60 sm:w-72 sm:h-72 object-cover rounded-full border-4 border-gray-700 shadow-lg"
           />

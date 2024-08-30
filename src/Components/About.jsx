@@ -44,12 +44,14 @@ function About() {
           transition={{ duration: 0.8, type: "spring", stiffness: 50 }}
         >
           <p className="text-md text-gray-300 leading-relaxed max-w-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-            explicabo tenetur nulla soluta placeat! Similique, excepturi eos
-            rem, omnis dicta sit facere totam reiciendis alias commodi id
-            exercitationem esse beatae aliquam possimus veritatis quod odit a,
-            facilis molestias neque. Vero eaque aliquam, magnam dicta tempora
-            voluptatibus obcaecati? Ipsa, sint sequi.
+            I am a passionate software developer currently pursuing a Master of
+            Computer Applications at Graphic Era Hill University. With a strong
+            background in JavaScript and Java, I've built a variety of projects
+            such as MyTube, MovieFix, and a Quiz App, using technologies like
+            React, Redux, and Firebase. I enjoy creating intuitive and
+            user-friendly applications and thrive in collaborative environments.
+            I am committed to continuously enhancing my skills and staying
+            updated with the latest developments in the tech industry
           </p>
         </motion.div>
       </div>

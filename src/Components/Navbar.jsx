@@ -23,7 +23,7 @@ function Navbar() {
           >
             <div className="text-lg md:text-xl text-white hover:bg-lime-500 p-2 rounded-full flex items-center">
               {item.icon}
-              <span className="absolute right-full mr-2 -translate-y-1/2 hidden group-hover:block text-white text-xs p-1 rounded bg-transparent mb-0">
+              <span className="mt-1 absolute right-full mr-2 -translate-y-1/2 -translate-x-1/2 hidden group-hover:block text-white text-xs bg-transparent mb-0">
                 {item.name}
               </span>
             </div>

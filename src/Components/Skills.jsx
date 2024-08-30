@@ -36,7 +36,7 @@ function Skills() {
         className="w-full max-w-3xl grid grid-cols-1 md:grid-cols-2 gap-6"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ amount: 0.5 }} // Trigger when 10% of the element is in view
+        viewport={{ amount: 0.2 }} // Trigger when 10% of the element is in view
         transition={{ duration: 0.5, delay: 0.4 }} // Increased duration and reduced delay
       >
         {skill_set.map((skill, index) => (
