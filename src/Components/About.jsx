@@ -31,7 +31,7 @@ function About() {
           transition={{ duration: 0.8, type: "spring", stiffness: 50 }}
         >
           <img
-            src="IMG_20240829_175631[1].jpg"
+            src="src\assets\IMG_0737[1].JPG"
             alt="photo"
             className="w-60 h-60 sm:w-72 sm:h-72 object-cover rounded"
           />
