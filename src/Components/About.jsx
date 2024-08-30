@@ -31,7 +31,7 @@ function About() {
           transition={{ duration: 0.8, type: "spring", stiffness: 50 }}
         >
           <img
-            src="/src/assets/mypicture.JPG"
+            src="https://res.cloudinary.com/dqw7abjj6/image/upload/v1724997018/IMG_0737_1_xkumho.jpg"
             alt="photo"
             className="w-60 h-60 sm:w-72 sm:h-72 object-cover rounded"
           />
