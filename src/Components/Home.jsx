@@ -60,9 +60,11 @@ function Home() {
               <FaGithubSquare className="text-white hover:text-neon-500 text-xl sm:text-2xl" />
             </Link>
           </div>
-          <button className="mt-4 px-4 py-2 sm:px-6 sm:py-3 border border-gray-100 text-gray-100 bg-transparent rounded-lg hover:bg-gray-100 hover:text-gray-900 transition duration-300 shadow-md">
-            Hire me
-          </button>
+          <a href="#contact">
+            <button className="mt-4 px-4 py-2 sm:px-6 sm:py-3 border border-gray-100 text-gray-100 bg-transparent rounded-lg hover:bg-gray-100 hover:text-gray-900 transition duration-300 shadow-md">
+              Hire me
+            </button>
+          </a>
         </motion.div>
 
         <motion.div
