@@ -78,9 +78,10 @@ function Projects() {
                 <img
                   src={project.photo}
                   alt={project.projectName}
-                  className="w-full h-64 object-cover rounded-t-lg"
+                  className="w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 lg:max-h-[28rem] xl:max-h-[32rem] object-cover rounded-t-lg"
                 />
               )}
+
               <div className="p-6">
                 <h2 className="text-2xl font-semibold text-white mb-4">
                   {project.projectName}
