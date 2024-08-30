@@ -7,7 +7,6 @@ import About from "./Components/About";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
-import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   const [init, setInit] = useState(false);
