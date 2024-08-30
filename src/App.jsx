@@ -93,7 +93,7 @@ const App = () => {
                   enable: true,
                   area: 800,
                 },
-                value: 250,
+                value: 120,
               },
               opacity: {
                 value: 0.5,

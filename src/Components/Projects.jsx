@@ -12,7 +12,8 @@ function Projects() {
       projectName: "MyTube",
       projectdesc:
         "A React-based video streaming application showcasing trending videos and channel content. Implemented interactive features like subscribe and like buttons, a Liked Videos section, playlist management, and a search suggestion system with debouncing. Also launched a dark theme for a better user experience. Technologies used include React, Redux, Tailwind CSS, and the YouTube API.",
-      photo: "https://via.placeholder.com/400x300", // Replace with actual image URL if available
+      photo:
+        "https://res.cloudinary.com/dqw7abjj6/image/upload/v1725001628/WhatsApp_Image_2024-08-30_at_12.36.43_ab46b5a6_tqzkuq.jpg",
     },
     {
       live: "https://wonderful-frangollo-420faa.netlify.app/",
@@ -20,7 +21,8 @@ function Projects() {
       projectName: "MovieFix",
       projectdesc:
         "A movie browsing application with a modern UI and secure authentication via Google Firebase. Features include multilingual support, a splash screen, shimmer effect for loading states, and dynamic page titles. Integrated TMDB API for movie categories and a similar movies feature to enhance content exploration. Built with React, Redux, Tailwind CSS, TMDB API, and Firebase Authentication.",
-      photo: "https://via.placeholder.com/400x300", // Replace with actual image URL if available
+      photo:
+        "https://res.cloudinary.com/dqw7abjj6/image/upload/v1725001419/WhatsApp_Image_2024-08-30_at_12.33.13_14d31502_kl4mfp.jpg",
     },
   ];
 
