@@ -72,7 +72,7 @@ function Home() {
           transition={{ type: "spring", stiffness: 50 }}
         >
           <img
-            src="https://res.cloudinary.com/dqw7abjj6/image/upload/v1724997281/my_pic_fwuy7x.jpg"
+            src="https://res.cloudinary.com/dqw7abjj6/image/upload/v1724997588/Akshatpic_tkdibf.jpg"
             alt="photo"
             className="w-60 h-60 sm:w-72 sm:h-72 object-cover rounded-full border-4 border-gray-700 shadow-lg"
           />
