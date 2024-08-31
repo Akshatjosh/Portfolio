@@ -46,12 +46,15 @@ function About() {
           <p className="text-md text-gray-300 leading-relaxed max-w-lg">
             I am a passionate software developer currently pursuing a Master of
             Computer Applications at Graphic Era Hill University. With a strong
-            background in JavaScript and Java, I've built a variety of projects
-            such as MyTube, MovieFix, and a Quiz App, using technologies like
-            React, Redux, and Firebase. I enjoy creating intuitive and
-            user-friendly applications and thrive in collaborative environments.
-            I am committed to continuously enhancing my skills and staying
-            updated with the latest developments in the tech industry
+            background in JavaScript and Java, I have developed a variety of
+            projects, including MyTube, MovieFix, and a Quiz App, utilizing
+            technologies such as React, Redux, Firebase, and Tailwind CSS. I
+            enjoy creating intuitive and user-friendly applications and thrive
+            in collaborative environments. I am also currently expanding my
+            expertise by learning Node.js, further broadening my capabilities in
+            full-stack development. I am committed to continuously enhancing my
+            skills and staying updated with the latest developments in the tech
+            industry.
           </p>
         </motion.div>
       </div>

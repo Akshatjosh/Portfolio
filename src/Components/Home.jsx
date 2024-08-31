@@ -37,10 +37,10 @@ function Home() {
             </span>
           </h3>
           <p className="text-gray-300 max-w-lg mx-auto leading-relaxed">
-            I am a passionate software developer pursuing a Master of Computer
-            Applications, with experience in JavaScript, Java, and building
-            projects like MyTube and MovieFix using React, Redux, Tailwind, and
-            Firebase.
+            I’m pursuing an MCA at Graphic Era Hill University with expertise in
+            JavaScript, Java, React, and Firebase. I’ve built projects like
+            MyTube and MovieFix, focusing on user-friendly apps, and I’m
+            expanding into full-stack development with Node.js.
           </p>
           <div className="flex gap-4 md:gap-6 mt-4">
             <Link
