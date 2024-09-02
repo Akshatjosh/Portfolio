@@ -3,6 +3,7 @@ import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import emailjs from "emailjs-com";
 
 // Initialize Firebase and Firestore
 const firebaseConfig = {
@@ -39,14 +40,50 @@ function Contact() {
     e.preventDefault();
 
     try {
+      // Save message to Firestore
       const docRef = await addDoc(collection(db, "contacts"), {
         name: name,
         email: email,
         message: message,
-        timestamp: new Date(), // Add a timestamp if needed
+        timestamp: new Date(),
       });
       console.log("Document written with ID: ", docRef.id);
-      notify();
+
+      // Send email using EmailJS
+      const emailParams = {
+        from_name: name,
+        from_email: email,
+        message: message,
+      };
+
+      emailjs
+        .send(
+          "service_1s1oi7w",
+          "template_by6d603",
+          emailParams,
+          "Kdg2Jb7QCCZ_zKGvR"
+        )
+        .then((response) => {
+          console.log(
+            "Email sent successfully:",
+            response.status,
+            response.text
+          );
+          notify();
+        })
+        .catch((error) => {
+          console.error("Failed to send email:", error);
+          toast.error("Failed to send message, please try again.", {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: false,
+            draggable: true,
+            progress: 0,
+            theme: "dark",
+          });
+        });
 
       // Clear the form fields after submission
       setName("");
