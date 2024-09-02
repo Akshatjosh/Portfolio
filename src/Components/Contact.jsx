@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import emailjs from "@emailjs/browser";
 
 // Initialize Firebase and Firestore
 const firebaseConfig = {
@@ -22,6 +23,7 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const form = useRef();
 
   const notify = () =>
     toast.success("Thank You For Contacting Me !", {
@@ -46,6 +48,24 @@ function Contact() {
         timestamp: new Date(), // Add a timestamp if needed
       });
       console.log("Document written with ID: ", docRef.id);
+
+      // Correct usage of emailjs.sendForm
+      emailjs
+        .sendForm(
+          "service_1s1oi7w",
+          "template_npxy26e",
+          form.current,
+          "Kdg2Jb7QCCZ_zKGvR"
+        )
+        .then(
+          () => {
+            console.log("SUCCESS!");
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+
       notify();
 
       // Clear the form fields after submission
@@ -75,7 +95,7 @@ function Contact() {
       <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
         Contact Me
       </h1>
-      <form onSubmit={handleSubmit} className="w-full max-w-lg">
+      <form ref={form} onSubmit={handleSubmit} className="w-full max-w-lg">
         <div className="flex flex-col gap-4">
           <input
             type="text"
