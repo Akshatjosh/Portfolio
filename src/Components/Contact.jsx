@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Bounce, ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
@@ -45,16 +45,22 @@ function Contact() {
         name: name,
         email: email,
         message: message,
-        timestamp: new Date(), // Add a timestamp if needed
+        timestamp: new Date(),
       });
       console.log("Document written with ID: ", docRef.id);
 
-      // Correct usage of emailjs.sendForm
+      // Add dynamic data to your email template
+      const templateParams = {
+        to_name: "Akshat", // Replace with the recipient's name
+        from_name: name, // The sender's name (user who filled out the form)
+        message: message,
+      };
+
       emailjs
-        .sendForm(
+        .send(
           "service_1s1oi7w",
           "template_npxy26e",
-          form.current,
+          templateParams,
           "Kdg2Jb7QCCZ_zKGvR"
         )
         .then(
