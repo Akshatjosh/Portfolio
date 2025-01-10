@@ -58,10 +58,10 @@ function Contact() {
 
       emailjs
         .send(
-          "service_1s1oi7w",
+          "service_mitnhur",
           "template_npxy26e",
           templateParams,
-          "Kdg2Jb7QCCZ_zKGvR"
+          "Lh72BtAt7R9JJBkJ7nngH"
         )
         .then(
           () => {
